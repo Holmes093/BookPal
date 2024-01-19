@@ -4,13 +4,23 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+.bg-image {
+    background-image: url("BookPal.png");
+
+    height: 100%; 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     padding: 20px;
-    background: #f0f0f0;
+    background: rgba(240, 240, 240, 0.7);
 }
 
 .login-form {
@@ -32,7 +42,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f7f7f7;
+    background: rgba(240, 240, 240, 0.7);
 }
 
 .form-box {
@@ -64,7 +74,7 @@ body, html {
 button {
     width: 100%;
     padding: 10px;
-    background: #007bff;
+    background: #819c7c;
     border: none;
     color: white;
     border-radius: 4px;
@@ -72,13 +82,13 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #698065;
 }
 
 a {
     display: block;
     margin-top: 10px;
-    color: #007bff;
+    color: #819c7c;
     text-decoration: none;
 }
 

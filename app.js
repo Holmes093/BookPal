@@ -9,6 +9,7 @@ require('dotenv/config');
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Session setup
 app.use(session({

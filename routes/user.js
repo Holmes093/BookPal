@@ -73,8 +73,9 @@ router.post('/login', async (req, res) => {
     // Set user ID in session
     req.session.userId = userExists._id
 
-    // Redirect to the protected route or send a success message
-    res.redirect('/');
+    // Send a success message
+    res.json({ success: true });
+
 })
 
 module.exports = router
