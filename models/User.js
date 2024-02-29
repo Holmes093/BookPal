@@ -17,7 +17,8 @@ const userSchema = mongoose.Schema({
     age: { // Age of user
         type:Number,
         require:true,
-        min:13
+        min:13,
+        max:120
     },
     location: { // Location of user
         type:String,
