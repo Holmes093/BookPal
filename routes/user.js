@@ -78,4 +78,28 @@ router.post('/login', async (req, res) => {
 
 })
 
+// GET Endpoints //
+
+// User Detail Endpoint
+router.get('/details', async (req, res) => {
+    if (!req.session.userId) {
+        return res.status(403).send({ message: 'Not logged in' });
+    }
+
+    try {
+        const user = await User.findById(req.session.userId);
+        if (!user) {
+            return res.status(400).send({ message: 'User not found' });
+        }
+
+        // Send the user details needed
+        res.json({
+            age: user.age,
+            location: user.location
+        });
+    } catch (error) {
+        res.status(400).send({ message: error });
+    }
+})
+
 module.exports = router
